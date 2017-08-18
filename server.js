@@ -6,6 +6,7 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
+var path = require("path");
 
 // Sets up the Express App
 // =============================================================
@@ -21,8 +22,11 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs({	"defaultLayout": "main",
+									"layoutsDir": path.join(__dirname, "/src/views/layouts")
+									}));
 app.set("view engine", "handlebars");
+app.set("views", path.join(__dirname, "/src/views"));
 
 // Static directory
 app.use(express.static("./src/public"));
