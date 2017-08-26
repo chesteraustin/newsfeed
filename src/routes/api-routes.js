@@ -28,7 +28,7 @@ db.on("error", function(error) {
 
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/week18Populater");
+mongoose.connect("mongodb://heroku_wl4jxdd2:h9r5boobbj4pu09q6l3anlf6ia@ds027618.mlab.com:27618/heroku_wl4jxdd2");
 var db = mongoose.connection;
 
 // Show any mongoose errors
