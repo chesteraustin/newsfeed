@@ -2,3 +2,30 @@
 <h1>This is for your newsfeed.</h1>
 
 <button id="getNews">Get News from Google</button>
+
+<div id="articles"></div>
+
+<div class="modal fade" id="notes_modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Create Note</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body container">
+		<div class="row">
+			<input type="text" id="note_author" placeholder="Note Author">
+		</div>
+		<div class="row">
+	        <textarea placeholder="Enter Notes"></textarea>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save notes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

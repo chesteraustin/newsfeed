@@ -1,5 +1,5 @@
 // *****************************************************************************
-// Power Hour App
+// Newsfeed
 //
 // ******************************************************************************
 // *** Dependencies
@@ -7,6 +7,14 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
+var logger = require("morgan");
+var mongoose = require("mongoose");
+// Set mongoose to leverage built in JavaScript ES6 Promises
+mongoose.Promise = Promise;
+
+// Requiring our Note and Article models
+var Note = require("./src/models/Article.js");
+var Article = require("./src/models/Comment.js");
 
 // Sets up the Express App
 // =============================================================
